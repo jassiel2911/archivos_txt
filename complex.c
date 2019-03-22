@@ -66,14 +66,14 @@ void suma(){
     I += guardarImaginario(lista);
 
 
-    gotoxy(24,12); fprintf(calculadora," + ");
+    fprintf(calculadora," + ");
 
-    gotoxy(27,12); fprintf(calculadora,"\E[00m[(%.3f) + (%.3f)i]",r,i);
+    fprintf(calculadora,"\E[00m[(%.3f) + (%.3f)i]",r,i);
 
     menu();
 
-    gotoxy(47,12); fprintf(calculadora,"\E[00m = ");
-    gotoxy(50,12); printf(calculadora,"\E[00m[(%.3f) + (%.3fi)]", R, I);
+    fprintf(calculadora,"\E[00m = ");
+    fprintf(calculadora,"\E[00m[(%.3f) + (%.3fi)]", R, I);
     
     fclose(calculadora);
 	}
@@ -117,14 +117,14 @@ void multiplicacion(){
     R = (R1 * R2) - (I1 * I2);
     I = (R1 * I2) + (R2 * I1);
 
-    gotoxy(24,12); fprintf(calculadora," · ");
+    fprintf(calculadora," · ");
 
-    gotoxy(27,12); fprintf(calculadora,"\E[00m[(%.3f) + (%.3f)i]",r,i);
+    fprintf(calculadora,"\E[00m[(%.3f) + (%.3f)i]",r,i);
 
     menu();
 
-    gotoxy(47,12); fprintf(calculadora,"\E[00m = ");
-    gotoxy(50,12); fprintf(calculadora,"\E[00m[(%.3f) + (%.3fi)]", R, I);
+    fprintf(calculadora,"\E[00m = ");
+    fprintf(calculadora,"\E[00m[(%.3f) + (%.3fi)]", R, I);
     fclose(calculadora);
 	}
 }
@@ -169,11 +169,11 @@ void potencia(){
     R = pow(modulo,exponente) * R;
     I = pow(modulo,exponente) * I;
 
-    gotoxy(4,15); fprintf(calculadora,"\E[00m[(%.3f) + (%.3f)i]",r,i);
-    gotoxy(24,14); fprintf(calculadora,"%.3f",exponente);
+    fprintf(calculadora,"\E[00m[(%.3f) + (%.3f)i]",r,i);
+    fprintf(calculadora,"%.3f",exponente);
 
-    gotoxy(27,15); fprintf(calculadora,"\E[00m = ");
-    gotoxy(33,15); fprintf(calculadora,"\E[00m[(%.3f) + (%.3fi)]", R, I);
+    fprintf(calculadora,"\E[00m = ");
+    fprintf(calculadora,"\E[00m[(%.3f) + (%.3fi)]", R, I);
     
     fclose(calculadora);
 	}
